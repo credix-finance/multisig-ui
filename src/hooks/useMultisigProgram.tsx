@@ -39,9 +39,11 @@ export function useMultisigProgram(): [Program, CredixClient] {
 		);
 		let newCredixClient = new CredixClient(
 			connection,
-			wallet as Wallet,
+			//@ts-ignore
+			wallet,
 			config
 		);
+		console.log("client for bart and sushant", newCredixClient);
 		return [newProgram, newCredixClient];
 	}, [wallet, connection]);
 }

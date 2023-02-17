@@ -7,6 +7,8 @@ module.exports = function override(config) {
 		https: require.resolve("https-browserify"),
 		crypto: require.resolve("crypto-browserify"),
 		stream: require.resolve("stream-browserify"),
+		path: require.resolve("path-browserify"),
+		fs: false,
 	});
 	config.resolve.fallback = fallback;
 	config.plugins = (config.plugins || []).concat([

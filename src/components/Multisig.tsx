@@ -126,6 +126,11 @@ const NO_SHOW_LIST = [
 	"fiq7nyThaQdH8wyfEFgFhHS4VnYFGdA4SvTP73LdgUh",
 	"Dc2DrnKfAcnnTwf9bJYGi8ot6qsr5BwPXLH6GNNy93cP",
 	"Crh7AQdaHbGQzMLpcgxU9xntjLfr5jxXejrPAfE9qnuR",
+	"DAAC3cA6FRZXFWRPwZEcuYJhE4XvrBVn81b3euwmDtCW",
+	"DG1UkiRaRoUJaDz2nYuwRUdgT7Zaqr7B8Fx2LJs7eGhS",
+	"8UAdfdSEHh2NsBq1JRbhsejZvccdVtWjRs1RVm68urZx",
+	"3kFi2X6WV3R5twcs21SWmTwUrt8w596o28GdCrrCVCyx",
+	"DcUqaEubCEwpHVykCx3QQmrbm6BomtStnkFNjPxEvNxF",
 	"GpDmfRGGF7Wz1EZ2rMU3Grn7NkVwspLMg3p7RHFtKk1S",
 	"4hRCkqCyyMtMvraFA7fGCFF3wpvCwdNXrMxGRxSwujqo",
 	"5cnSAp7vCadCH75R6Kat1ZW1Pq4W317hQ6bWKD35oTBN",
@@ -324,11 +329,12 @@ function ixLabel(tx: any, multisigClient: any) {
 	if (tx.account.programId.equals(TOKEN_PROGRAM_ID)) {
 		const tag = tx.account.data.slice(0, 1);
 		const amountBuf = tx.account.data.slice(1, 9) as Buffer;
-		const amountParsed = u64.fromBuffer(amountBuf).toNumber() / 1000000;
+		// const amountParsed = u64.fromBuffer(amountBuf).toNumber() / 1000000;
 		if (Buffer.from([3]).equals(tag)) {
 			return (
 				<ListItemText
-					primary={`Transfer ${amountParsed.toString()} Token`}
+					// primary={`Transfer ${amountParsed.toString()} Token`}
+					primary={"ok"}
 					secondary={tx.publicKey.toString()}
 				/>
 			);

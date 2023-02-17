@@ -126,7 +126,11 @@ function AdjustRepaymentScheduleListItemDetails({
 			return;
 		}
 		const dealPubkey = new PublicKey(e.target.value);
+		console.log("target", e.target.value);
+		console.log("deal pubkey", dealPubkey);
+		console.log(credixClient);
 		const dealForPubkey = await credixClient.fetchDealByPublicKey(dealPubkey);
+		console.log(dealForPubkey);
 		setDeal(dealForPubkey);
 		await fetchRepaymentSchedule();
 	};
@@ -188,6 +192,7 @@ function AdjustRepaymentScheduleListItemDetails({
 			periods: periods,
 		};
 
+		console.log("deal for bart and sushant", deal);
 		const adjustRepaymentScheduleIx = await deal?.adjustRepaymentScheduleIx(
 			adjustRepaymentScheduleConfig,
 			multisigSigner
