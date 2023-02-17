@@ -32,6 +32,7 @@ function App() {
 	return (
 		<MuiThemeProvider theme={theme}>
 			<CssBaseline />
+			{/* @ts-ignore */}
 			<SnackbarProvider maxSnack={5} autoHideDuration={8000}>
 				<ConnectionProvider>
 					<WalletProvider wallets={wallets} autoConnect>

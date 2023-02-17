@@ -688,6 +688,7 @@ export function MultisigInstance({ multisig }: { multisig: PublicKey }) {
 							) : (
 								// eslint-disable-next-line array-callback-return
 								transactions.map((tx: any) => {
+									console.log("executed", tx.account.didExecute);
 									if (!tx.account.didExecute) {
 										return (
 											<TxListItem
