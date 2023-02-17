@@ -80,11 +80,11 @@ import { ActivateDealListItem } from "./transactions/ActivateDeal";
 import { OpenDealListItem } from "./transactions/OpenDeal";
 import { TransferTokenListItem } from "./transactions/TransferToken";
 import { FreezeThawGlobalMarketStateListItem } from "./transactions/FreezeThawGlobalMarketState";
-import { InitializeMarketListItem } from "./transactions/InitializeMarket";
+// import { InitializeMarketListItem } from "./transactions/InitializeMarket";
 import { UpdateMarketListItem } from "./transactions/UpdateMarket";
 import { CredixPassListItem } from "./transactions/CredixPass";
 import { TranchePassListItem } from "./transactions/TranchePass";
-import { NameTokenListItem } from "./transactions/NameToken";
+// import { NameTokenListItem } from "./transactions/NameToken";
 import { MarketAdminsListItem } from "./transactions/MarketAdmins";
 import { UpdateDealListItem } from "./transactions/UpdateDeal";
 import { AdjustRepaymentScheduleListItem } from "./transactions/AdjustRepaymentSchedule";
@@ -258,11 +258,11 @@ function AddTransactionDialog({
 						multisig={multisig}
 						onClose={onClose}
 					/>
-					<NameTokenListItem
+					{/* <NameTokenListItem
 						didAddTransaction={didAddTransaction}
 						multisig={multisig}
 						onClose={onClose}
-					/>
+					/> */}
 					<AdjustRepaymentScheduleListItem
 						didAddTransaction={didAddTransaction}
 						multisig={multisig}
